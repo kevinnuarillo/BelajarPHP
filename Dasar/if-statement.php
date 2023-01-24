@@ -22,3 +22,15 @@ for ($i = 1; $i <= 100; $i++) {
      echo $i . PHP_EOL;
    }
 }
+
+for ($i = 1; $i <= 100; $i++) {
+	if ($i % 3 === 0 && $i % 5 === 0){
+		echo "FIZZ BUZZ!" . PHP_EOL;
+	} else if ($i % 5 === 0) {
+		echo "BUZZ" . PHP_EOL;
+	} else if ($i % 3 === 0) {
+		echo "FIZZ" . PHP_EOL;
+	} else {
+		echo $i . PHP_EOL;
+	}
+}

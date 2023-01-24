@@ -14,7 +14,6 @@
 # Business Logic
 
 		#PART1 - Buat file
-
 1. buat folder BusinessLogic
 2. tentukan business logic, di todolist ini kita tentukan dengan:
 		- AddTodoList.php
@@ -40,7 +39,7 @@
 ! masukan require_once file ini ke App.php
 
 # View
-
+		#PART1 - File starter
 1. buat folder view
 2. buat file view masing2 sesuai tampilan yang ditetapkan
 		- ViewAddTodoList.php
@@ -71,3 +70,79 @@
 2. require once dari BusinessLogic ambil AddTodoList.php
 3. test dengan function yang telah dibuat addTodoList()
 4. var_dump $todoList. 
+
+# business logic
+
+		#PART4 - RemoveTodoList
+1. set parameter int $number
+2. set global todoList
+3. buat perulangan for untuk menggeser value yang tidak dihapus
+		#LOGIC
+		// 1. makan
+		// 2. minum
+		// 3. tidur
+		// setelah dihapus nomer 2
+		// 1. makan
+		// 2. tidur
+4. set : bool setelah parameter untuk mengecek apakah value ada di todolist
+5. cek jika number lebih besar dari sizeof todolist maka return false
+6. setelah perulangan, unset todolist dari array/value sizeof todolist
+7. terakhir return true
+
+# Test
+		#PART4 - TestRemoveTodoList
+1. require yang dibutuhkan
+2. tambah beberapa todolist untuk di test
+3. remove todolist untuk test dan show kembali
+
+# Input
+		#PART1 - Buat folder dan file
+1. buat folder bernama 'Helper'
+2. buat file didalam folder 'Helper' Input.php
+
+		#PART2 - Input.php
+1. buat function bernapa input dengan parameter string $info dan menghasilkan string ':'
+2. echo "$info :"
+3. $result = fgets(STDIN)
+4. return trim($result) //trim karena agar spasi dan enter di hapus
+
+		#PART3 - TestInput.php
+1. buat file test input di folder Test
+2. requireonce input
+3. buat input seperti $name = input("name")
+4. echo "Hello $name ....
+
+# View
+		#PART2 - ViewShowTodoList
+1. require dari folder Model, BusinessLogic, View, Helper. cek satu satu apa yang dibutuhkan
+2. masukan function showTodoList();
+3. echo "MENU" dan pilihan 1,2,x
+4. isi $Pilihan = input("Pilihan")
+5. buat if statement jika pilihan 1 view, pilihan 2 remove, dan x keluar. else piliha tidak ada
+6. kemas seluruh isi di function ViewShowTodoList() ke while(true)
+7. buat echo informasi bahwa keluar dari aplikasi di luar while
+
+# Test
+		PART5 - TestViewShowTodoList
+1. require once yang dibutuhkan dari View,BusinessLogic
+2. masukan function viewShowTodoList()
+3. tambahan untuk menambah todolist addTodoList(); require once jangan lupa
+
+# View
+		PART3 - ViewAddTodoList.php
+1. Require_once yang dibutuhkan dari Helper, BusinessLogic, Model
+2. di dalam function, isi echo tambah todolist
+3. buat input dari variable $todo = input("...")
+4. cek jika $todo sama dengan "x" maka echo berhasil batal, else addTodoList()
+
+# Test
+		PART6 - TestViewAddTodoList.php
+1. Requireonce yang perlu dari view, businessLogic.
+2. jika ingin menambah untuk menampilkan todolist masukan require BusinessLogic/AddTodoList
+3. test masukan function viewAddTodoList() lalu showTodoList()
+
+
+
+
+
+
